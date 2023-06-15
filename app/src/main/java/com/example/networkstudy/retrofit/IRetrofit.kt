@@ -1,13 +1,12 @@
 package com.example.networkstudy.retrofit
 
-import com.example.networkstudy.WeatherResponse
+import com.example.networkstudy.Root
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.Path
 
 interface IRetrofit {
-    @GET("forecast")
-    fun getWeathers(@Query("q") city: String,
-                    @Query("appid") apiKey: String): Call<WeatherResponse>
-
+    @GET("api/subway/{key}/json/realtimeStationArrival/0/5/{station}")
+    fun getRealtimePosition(@Path("key") apiKey: String,
+                            @Path("station") station: String): Call<Root>
 }

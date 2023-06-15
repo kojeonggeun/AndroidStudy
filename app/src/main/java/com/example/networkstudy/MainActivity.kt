@@ -17,14 +17,15 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        fetchAndDisplayWeatherForCity()
+        fetchRealTimeSubwayInfo()
 
     }
 
-    private fun fetchAndDisplayWeatherForCity() {
-        RetrofitManager.instance.getWeathers(city = "seoul") {
+    private fun fetchRealTimeSubwayInfo() {
+        RetrofitManager.instance.getRealtimeSubwayPosition(station = "부천") {
             runOnUiThread {
-                binding.city.text = it?.city?.name
+                println(it?.body().toString())
+//                binding.city.text = it?.city?.name
 //                val iconUrl = API.ICON_BASE_URL + it?.weather?.get(0)?.icon + ".png"
 //
 //                Glide.with(this@MainActivity)
