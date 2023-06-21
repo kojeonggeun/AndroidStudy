@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NetworkStudy</string>
+    <string name="updnLine">상행하행</string>
+    <string name="trainLineNm">trainLineNm</string>
+    <string name="subwayid">subwayID</string>
+    <string name="arvlMsg2">arvlMsg2</string>
+    <string name="arvlMsg3">arvlMsg3</string>
+    <string name="arvlCd">도착코드</string>
 </resources>
